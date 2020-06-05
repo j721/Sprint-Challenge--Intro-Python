@@ -17,3 +17,14 @@
 #     pass
 #
 # Put a comment noting which class is the base class
+
+#Start of code
+
+#Base class
+class Vehicle:
+    pass
+
+#Base class Vehicle
+class FlightVehicle(Vehicle):
+    pass
+
