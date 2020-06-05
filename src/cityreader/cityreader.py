@@ -3,6 +3,7 @@
 
 #first need to import csv module
 import csv
+
 class City:
   def __init__(self, name, lat, lon):
     self.name = name
@@ -30,7 +31,12 @@ def cityreader(cities=[]):
   # TODO Implement the functionality to read from the 'cities.csv' file
   # For each city record, create a new City instance and add it to the 
   # `cities` list
-    
+
+  with open("/src/cityreader/cities.csv") as file:
+    datareader = csv.DictReader(file, delimiter =",", quotechar ="|")
+    for row in datareader:
+      city = City(row["city"], float(row["lat"]), float(row["lng"]))
+      cities.append(city)
     return cities
 
 cityreader(cities)
