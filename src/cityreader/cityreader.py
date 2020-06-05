@@ -32,7 +32,7 @@ def cityreader(cities=[]):
   # For each city record, create a new City instance and add it to the 
   # `cities` list
 
-  with open("/src/cityreader/cities.csv") as file:
+  with open("cities.csv") as file:
     datareader = csv.DictReader(file, delimiter =",", quotechar ="|")
     for row in datareader:
       city = City(row["city"], float(row["lat"]), float(row["lng"]))
@@ -42,8 +42,8 @@ def cityreader(cities=[]):
 cityreader(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
-for c in cities:
-    print(c)
+for city in cities:
+    print(city.name, city.lat, city.lon )
 
 # STRETCH GOAL!
 #
