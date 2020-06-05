@@ -20,11 +20,30 @@
 
 #Start of code
 
-#Base class
+#Base class Vehicle
 class Vehicle:
     pass
 
-#Base class Vehicle
+#Base/Parent class Vehicle
 class FlightVehicle(Vehicle):
     pass
 
+#Parent class FlightVehicle
+class Airplane(FlightVehicle):
+    pass
+
+#Parent class FlightVehicle
+class Starship(FlightVehicle):
+    pass
+
+# Base class Vehicle
+class GroundVehicle(Vehicle):
+    pass
+
+#Base class GroundVehicle
+class Car(GroundVehicle):
+    pass
+
+#Base class GroundVehicle
+class Motorcycle(GroundVehicle):
+    pass 
